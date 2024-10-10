@@ -23,12 +23,12 @@ namespace GameStore.Data.Data
         {
             optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-UGIFB2Q;Initial Catalog=gamestore;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False");
         }
-
+        public DbSet<Platform> Platforms { get; set; }
         public DbSet<Game> Games { get; set; }
         public DbSet<GameGenre> GameGenres { get; set; }
         public DbSet<GamePlatform> GamePlatforms { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Platform> Platforms { get; set; }
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
